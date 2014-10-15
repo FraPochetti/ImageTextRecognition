@@ -16,3 +16,15 @@ The file you should look at first is **main.py**. This file instantiates classes
 The data used for this project is the **Chars74K dataset** which can be found [here](http://www.ee.surrey.ac.uk/CVSSP/demos/chars74k/).
 
 A complete explanation of the work can be found on my [website](http://francescopochetti.com/portfoliodata-science-machine-learning/).
+
+------------------------------------------------------------------------------------
+
+Ideas for improvement:
+
+1. Get rid of nested rectangles in object detection. Solves the problem of detecting a circle (classified as an 'o') inside an 'a'.
+
+2. Manually labeling objects containing or not containing text. It is possible to add a wait_for_key during the object detection phase and as soon as a rectangle is identified manually specify if it's text or not. For example a tree may be miscassified as text and then classified as a T. Manual detection is very time consuming and before diving into that it is necessary to analyze the pipeline and be sure that it is worth doing it.
+
+3. Introduce as a final step a 'Guess Missing Text Phase' to correct little mistakes. For example if in the end we should detect the word 'house' but we identify 'hous', well of course that's a house! 
+
+4. Implement Neural Network and Deep Learning.
